@@ -1,8 +1,8 @@
 $.fn.slider = function (options)
 {
 	var settings = $.extend({
-		onSlideLeft: null,
-		onSlideRight: null
+		onSlideLeft: function() {},
+		onSlideRight: function() {}
 	}, options );
 
 	var currentSlide = 1;
