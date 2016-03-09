@@ -4,19 +4,7 @@
 }
 .slider_container .slider-arrow-left,
 .slider_container .slider-arrow-right {
-  position: absolute;
-  z-index: 1;
   cursor: pointer;
-}
-.slider_container .slider-arrow-left {
-  left: 50px;
-  top: 50%;
-  margin-top: -22px;
-}
-.slider_container .slider-arrow-right {
-  right: 50px;
-  top: 50%;
-  margin-top: -22px;
 }
 .slider_container .slider {
   max-width: none;
