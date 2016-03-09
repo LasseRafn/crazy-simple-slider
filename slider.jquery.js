@@ -1,5 +1,10 @@
-$.fn.slider = function ()
+$.fn.slider = function (options)
 {
+	var settings = $.extend({
+		onSlideLeft: null,
+		onSlideRight: null
+	}, options );
+
 	var currentSlide = 1;
 	var totalSlides = this.find(".slide").length;
 	var container = this.find(".slide_container");
@@ -25,6 +30,8 @@ $.fn.slider = function ()
 			currentSlide--;
 		}
 
+		settings.onSlideLeft();
+
 		updateSliderImage();
 	});
 
@@ -38,6 +45,8 @@ $.fn.slider = function ()
 		{
 			currentSlide++;
 		}
+
+		settings.onSlideRight();
 
 		updateSliderImage();
 	});
