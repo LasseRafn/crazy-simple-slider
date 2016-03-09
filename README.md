@@ -15,7 +15,21 @@ Please submit an issue, or should you have the solution; make a pull request ple
 I do not plan to implement options, other transitions (only those supported by native CSS) or similar. It's supposed to simply work, with no bs that makes sites lag.
 
 # Events
-There is currently no events (e.g. onSlide or such) and there is no plan to implement so.
+## onSlideLeft (slide left)
+This option allows you to set a callback for when the slider slides left
+````
+$("#slider").slider({
+  onSlideLeft: function () { alert('slide left!'); }
+});
+````
+
+## onSlideRight (slide right)
+This option allows you to set a callback for when the slider slides right
+````
+$("#slider").slider({
+  onSlideRight: function () { alert('slide right!'); }
+});
+````
 
 # Methods
-There is currently no methods (e.g. to add new slides at runtime) and there is no plan to implement so.
+There is currently no methods (e.g. to add new slides at runtime)
