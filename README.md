@@ -32,4 +32,18 @@ $("#slider").slider({
 ````
 
 # Methods
-There is currently no methods (e.g. to add new slides at runtime)
+## setSlide(slideNum);
+This method allows you to set the current slide using the slide number/index. Handy for thumbnails and such.
+````
+var slider = $("#slider").slider();
+
+slider.setSlide(2);
+````
+
+## getCurrentSlide();
+This method allows you to get the current slide number / index
+````
+var slider = $("#slider").slider();
+
+slider.getCurrentSlide(); // 1
+````
