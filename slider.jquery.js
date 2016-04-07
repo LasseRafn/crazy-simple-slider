@@ -1,9 +1,13 @@
 $.fn.slider = function (options)
 {
 	var settings = $.extend({
-		onSlideLeft: function() {},
-		onSlideRight: function() {}
-	}, options );
+		onSlideLeft: function ()
+		{
+		},
+		onSlideRight: function ()
+		{
+		}
+	}, options);
 
 	var currentSlide = 1;
 	var totalSlides = this.find(".slide").length;
@@ -17,7 +21,7 @@ $.fn.slider = function (options)
 	{
 		container.css("transform", "translateX(-" + (currentSlide - 1) / totalSlides * 100 + "%)");
 		container.css("transform", "-webkit-translateX(-" + (currentSlide - 1) / totalSlides * 100 + "%)");
-	}
+	};
 
 	this.find(".slider-arrow-left").click(function ()
 	{
@@ -50,6 +54,20 @@ $.fn.slider = function (options)
 
 		updateSliderImage();
 	});
+
+	this.getCurrentSlide = function()
+	{
+		return currentSlide;
+	}
+
+	this.setSlide = function(slideNum) {
+
+		currentSlide = slideNum;
+
+		updateSliderImage();
+
+		return this;
+	};
 
 	return this;
 };
